@@ -1,0 +1,28 @@
+{
+  "num_trials": 20,
+  "hyperparameters": [
+    {
+      "name": "n_estimators",
+      "short_desc": "The number of trees in the forest.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 50,
+      "range_high": 500
+    },
+    {
+      "name" : "learning_rate",
+      "short_desc": "Learning rate shrinks the contribution of each tree by learning_rate.",
+      "type": "real",
+      "search_type": "uniform",
+      "range_low": 0.01,
+      "range_high": 0.2
+    },
+    {
+      "name" : "algorithm",
+        "short_desc": "The boosting algorithm to use.",
+        "type": "categorical",
+        "search_type": "choice",
+        "values": ["SAMME", "SAMME.R"],
+    }
+  ]
+}
